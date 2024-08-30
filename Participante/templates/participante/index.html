@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 10px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Información del Participante</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Detalles</h2>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <td>{{ participante.nombre }}</td>
+                </tr>
+                <tr>
+                    <th>Fecha de Nacimiento</th>
+                    <td>{{ participante.fecha_nacimiento }}</td>
+                </tr>
+                <tr>
+                    <th>Dirección</th>
+                    <td>{{ participante.direccion }}</td>
+                </tr>
+                <tr>
+                    <th>Teléfono</th>
+                    <td>{{ participante.telefono }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ participante.email }}</td>
+                </tr>
+                <tr>
+                    <th>Sexo</th>
+                    <td>{{ participante.sexo }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

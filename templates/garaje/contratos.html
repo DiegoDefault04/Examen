@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Contratos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'garaje/styles.css' %}">
+</head>
+<body>
+    <h1>Contratos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Automóvil</th>
+                <th>Fecha de Compra</th>
+                <th>Costo Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contrato in contratos %}
+            <tr>
+                <td>{{ contrato.cliente.nombre }}</td>
+                <td>{{ contrato.automovil.nombre }}</td>
+                <td>{{ contrato.fecha_compra }}</td>
+                <td>{{ contrato.costo_total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
